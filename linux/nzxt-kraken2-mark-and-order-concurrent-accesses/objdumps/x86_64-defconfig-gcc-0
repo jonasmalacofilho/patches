@@ -23,11 +23,13 @@ Disassembly of section .text:
   51:	74 06                	je     59 <kraken2_read+0x29>
   53:	b8 a1 ff ff ff       	mov    eax,0xffffffa1
   58:	c3                   	ret    
+hwmon_fan:
   59:	48 63 c9             	movsxd rcx,ecx
   5c:	0f b7 44 4a 14       	movzx  eax,WORD PTR [rdx+rcx*2+0x14]
   61:	49 89 00             	mov    QWORD PTR [r8],rax
   64:	31 c0                	xor    eax,eax
   66:	c3                   	ret    
+hwmon_temp:
   67:	48 63 c9             	movsxd rcx,ecx
   6a:	48 63 44 8a 10       	movsxd rax,DWORD PTR [rdx+rcx*4+0x10]
   6f:	49 89 00             	mov    QWORD PTR [r8],rax
